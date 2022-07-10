@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateConsultantsTable extends Migration
+return new class extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class CreateConsultantsTable extends Migration
      */
     public function up()
     {
-        Schema::create('consultants', function (Blueprint $table) {
+        Schema::create('mode_of_payments', function (Blueprint $table) {
             $table->id();
+            $table->tinyInteger('months_3');
+            $table->tinyInteger('months_6');
+            $table->integer('amount_of_initial_disposal');
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ class CreateConsultantsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('consultants');
+        Schema::dropIfExists('mode_of_payments');
     }
-}
+};

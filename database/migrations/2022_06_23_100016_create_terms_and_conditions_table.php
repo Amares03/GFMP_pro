@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateParalegalsTable extends Migration
+return new class extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,9 @@ class CreateParalegalsTable extends Migration
      */
     public function up()
     {
-        Schema::create('paralegals', function (Blueprint $table) {
+        Schema::create('terms_and_conditions', function (Blueprint $table) {
             $table->id();
+            $table->longText('terms_table');
             $table->timestamps();
         });
     }
@@ -26,6 +27,6 @@ class CreateParalegalsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('paralegals');
+        Schema::dropIfExists('terms_and_conditions');
     }
-}
+};

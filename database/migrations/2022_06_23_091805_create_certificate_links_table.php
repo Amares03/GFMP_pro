@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAttorneysTable extends Migration
+return new class extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,9 @@ class CreateAttorneysTable extends Migration
      */
     public function up()
     {
-        Schema::create('attorneys', function (Blueprint $table) {
+        Schema::create('certificate_links', function (Blueprint $table) {
             $table->id();
+            $table->string('certificate',400);
             $table->timestamps();
         });
     }
@@ -26,6 +27,6 @@ class CreateAttorneysTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('attorneys');
+        Schema::dropIfExists('certificate_links');
     }
-}
+};
