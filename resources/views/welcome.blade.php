@@ -11,106 +11,176 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
         <!-- Styles -->
-        
-
-        <style>
-              body {
-                font-family: 'Nunito', sans-serif;  
-            }
-            .bd-placeholder-img {
-                font-size: 1.125rem;
-                text-anchor: middle;
-                -webkit-user-select: none;
-                -moz-user-select: none;
-                user-select: none;
-                 }
-
-                @media (min-width: 768px) {
-                  .bd-placeholder-img-lg {
-                    font-size: 3.5rem;
-                  }
-                }
-
-                .b-example-divider {
-                  height: 3rem;
-                  background-color: rgba(0, 0, 0, .1);
-                  border: solid rgba(0, 0, 0, .15);
-                  border-width: 1px 0;
-                  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-                }
-
-                .b-example-vr {
-                  flex-shrink: 0;
-                  width: 1.5rem;
-                  height: 100vh;
-                }
-
-                .bi {
-                  vertical-align: -.125em;
-                  fill: currentColor;
-                }
-
-                .nav-scroller {
-                  position: relative;
-                  z-index: 2;
-                  height: 2.75rem;
-                  overflow-y: hidden;
-                }
-                .nav {
-                      --bs-nav-link-padding-x: 1rem;
-                      --bs-nav-link-padding-y: 0.5rem;
-                      --bs-nav-link-font-weight: ;
-                      --bs-nav-link-color: var(--bs-link-color);
-                      --bs-nav-link-hover-color: var(--bs-link-hover-color);
-                      --bs-nav-link-disabled-color: #6c757d;
-                      display: flex;
-                      flex-wrap: wrap;
-                      padding-left: 0;
-                      margin-bottom: 0;
-                      list-style: none;
-                      }
-
-                    .nav-scroller .nav {
-                      display: flex;
-                      flex-wrap: nowrap;
-                      padding-bottom: 1rem;
-                      margin-top: -1px;
-                      overflow-x: auto;
-                      text-align: center;
-                      white-space: nowrap;
-                      -webkit-overflow-scrolling: touch;
-                    }
-        </style>
+        <link rel="stylesheet" href="/css/style.css">
+       
     </head>
-    <body class="d-flex h-100 text-center " style=" background-color:#2C3639; color:#FFFFFF">
+    <body >
+      <!-- <div class="bigLogo">
+        <div class="logo">Glen Forest Memorial Park</div>
+      </div> -->
       
-        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column" >
-            <header class="mb-auto" style=" background-color:#2C3639D0;">
-                <div>
-                    <h3 class="float-md-start m-3" style="color:#D4D925">GFMP LOGO HERE</h3>
-                    <nav class="nav nav-masthead justify-content-center float-md-end" >
+      <header>
+                  
+                  <a href="#" class="logo"><div class="logoCover"><img src="/assets/logo.png" alt="..."></div></a>   
+                      <ul>
                         @if (Route::has('login'))
-                                @auth
-                                    <a href="{{ url('/home') }}" class="nav-link fw-bold py-1 m-2 px-0">Home</a>
-                                @else
-                                    <a href="{{ route('login') }}" class="nav-link fw-bold py-1 m-2 px-0">Log in</a>
-            
-                                    @if (Route::has('register'))
-                                        <a href="{{ route('register') }}" class="nav-link fw-bold py-1 m-2 px-0">Register</a>
-                                    @endif
-                                @endauth
-                            
-                        @endif
-                    </nav>
-                </div>
+                            @auth
+                        <li><a href="{{ url('/home') }}" >Home</a></li>
+                              @else
+                        <li><a href="{{ route('login') }}" >Log in</a></li>
+                              @if (Route::has('register'))
+                        <li><a href="{{ route('register') }}" >Register</a></li>
+                      </ul>  
+                              @endif
+                            @endauth
+                        @endif   
+                    
+
             </header>
-            <main class="px-3">
-                <h1>Landing Page Here</h1>
-                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum reprehenderit voluptate veniam obcaecati repudiandae at suscipit, eum magni iste voluptatum est ab sed repellendus, quidem impedit veritatis maiores dolorum. Exercitationem.</p>
-            </main>
-                <footer class="mt-auto text-white-50">
-                    <p><a href="#" class="text-white">GFMP Team</a>.</p>
-                </footer>
+            
+         <div class="banner">
+            <div class="slider">
+                <img src="/assets/bg3.jpg" alt="..." id="slideImg">
+            </div>
+         </div>
+         <div class="leadingText">
+              <p>PICNIC AND TRAILS STATUS: OPEN</p>
+              <p>CLICK HERE TO VIEW PARK TRAILS GUIDE</p>
+         </div>
+         <div class="container crd">
+            <div class="card">
+              <div class="card-body">
+                <img src="/assets/card1.png" alt="" id="cardImg">
+              </div>
+            </div>
+          </div>
+          <div class="container mission">
+            <p>Our mission:</p>
+            <p> <b>Preserve, Restore, and Enhance Memorial Park </b> for the enjoyment of all Houstonians, today and tomorrow</p>
+          </div>
+        <div class="container information">
+          <div class="row first-row">
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                 <h5 class="card-title">Park Information</h5>
+                   <ul class="list-group list-group-flush">
+                      <li class="list-group-item"><a href="#"><i class="bi bi-chevron-right"></i>park information</a></li>
+                      <li class="list-group-item"><a href="#"><i class="bi bi-chevron-right"></i>park information</a></li>
+                      <li class="list-group-item"><a href="#"><i class="bi bi-chevron-right"></i>park information</a></li>
+                      <li class="list-group-item"><a href="#"><i class="bi bi-chevron-right"></i>park information</a></li>
+                      <li class="list-group-item"><a href="#"><i class="bi bi-chevron-right"></i>park information</a></li>
+                      <li class="list-group-item"><a href="#"><i class="bi bi-chevron-right"></i>park information</a></li>
+                   </ul>
+                   
+                </div>
+                <div class="card-footer "></div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <div class="peopleImg">
+                    <img src="/assets/people.jpg" alt="..." class="peopleImgImg">
+                  </div>
+                  <p>Houston Rodeo Trail Riders</p>
+                  <p>return to Memorial Park</p>
+                 <button type="button" class="btn btn-outline-success">Read More</button>
+                </div>
+                <div class="card-footer"></div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+               
+                </div>
+                <div class="card-footer "></div>
+              </div>
+            </div>
+          </div>
+          <div class="row second-row">
+            <div class="card">
+                 <div class="card-header">
+                    <h5>FEATURED AT MEMORIAL PARK CONSERVANCY</h5>
+                 </div>
+              <div class="card-body">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore vel porro enim aut quibusdam ipsa, molestiae assumenda saepe expedita aperiam quidem? Nihil reprehenderit sapiente eligendi deleniti consequuntur quisquam molestiae eos.</p>
+              </div>
+            </div>
+          </div>
+          <div class="row second-row">
+            <div class="card">
+                 <div class="card-header">
+                    <h5>FEATURED AT MEMORIAL PARK CONSERVANCY</h5>
+                 </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col"><img src="/assets/building.svg" alt="..."></div>
+                  <div class="col"><img src="/assets/house.svg" alt="..."></div>
+                  <div class="col"><img src="/assets/bank.svg" alt="..."></div>
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+           <div class="row first-row">
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                 <div class="peopleImg">
+                    <img src="/assets/people1.jpg" alt="..." class="peopleImgImg">
+                  </div>
+                </div>
+                <div class="card-footer "></div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                   <div class="peopleImg">
+                    <img src="/assets/people2.jpg" alt="..." class="peopleImgImg">
+                  </div>
+                </div>
+                <div class="card-footer"></div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <div class="peopleImg">
+                    <img src="/assets/people3.jpg" alt="..." class="peopleImgImg">
+                  </div>
+                </div>
+                <div class="card-footer "></div>
+              </div>
+            </div>
+          </div>
         </div>
+        
+       <footer>
+        <div class="container foot">
+          <div class="row">
+            <div class="col f-col">
+              <img src="/assets/logo.png" alt="..." id="footLogo">
+            </div>
+            <div class="col f-col">
+              <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Press</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="col f-col"></div>
+          </div>
+          <div class="row">
+              <div class="col s-col"><img src="/assets/facebook.svg" alt=""></div>
+              <div class="col s-col"><img src="/assets/instagram.svg" alt=""></div>
+              <div class="col s-col"><img src="/assets/twitter.svg" alt=""></div>
+              <div class="col s-col"><img src="/assets/whatsapp.svg" alt=""></div>
+          </div>
+        </div>
+       </footer>
     </body>
+     <script src="/js/landingPage.js"></script>
 </html>
